@@ -1,0 +1,13 @@
+﻿/* Pages/StyleSheet.css */
+/* добавили таблицу стилей */
+
+body {
+    margin: 0 15px;
+    padding: 5px 10px 0;
+    background-color: rgb(135, 160, 245); /* цвет фона страницы */
+    font-family: Verdana, sans-serif; /* стиль шрифта Verdana без засечек */
+    font-size: 18px;
+    color: forestgreen; /* цвет текста */
+}
+
+

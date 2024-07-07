@@ -1,0 +1,41 @@
+﻿@* MovieDetails.cshtml *@
+
+@page "{id}"
+@model Razor_Pages_ListOfMovies3.Pages.MovieDetailsModel
+@{
+    int id = -1;
+    try
+    {
+        id = Int32.Parse(RouteData.Values["id"].ToString());
+    }
+    catch (Exception) { }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="/css/StyleSheet.css"> <!-- путь к стилям -->
+    <style>
+        body {
+            margin: 0 15px;
+            padding: 5px 10px 0;
+            background-color: rgb(110, 150, 245);
+            font-family: Verdana, sans-serif;
+            font-size: 20px;
+            color: black;
+        }
+        h5 {color: white;} /* цвет текста для h5 */
+    </style>
+</head>
+<body>    
+    <h2>@Model.Movie.Name_</h2>
+    <h5> О фильме </h5>
+    <p><strong>Director:</strong> @Model.Movie.Director_</p>
+    <p><strong>Year:</strong> @Model.Movie.Year_</p>
+    <p style="font-style: italic"> <strong> Description: </strong>  @Model.Movie.Description_</p>
+
+    <a href="/">Back to List</a>
+</body>
+</html>
